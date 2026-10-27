@@ -1,13 +1,13 @@
 {
-    "name": "@flowops/demo-upstream",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "description": "FlowOps demo upstream",
-    "scripts": {
-        "test": "echo \"no tests yet\""
-    },
-    "dependencies": {
-        "@flowops/common": "*"
-    }
+  "name": "@flowops/demo-upstream",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FlowOps demo upstream",
+  "scripts": {
+    "test": "echo \"no tests yet\""
+  },
+  "dependencies": {
+    "@flowops/common": "*"
+  }
 }

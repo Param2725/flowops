@@ -1,13 +1,13 @@
 {
-    "name": "@flowops/control-plane",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "description": "FlowOps control plane",
-    "scripts": {
-        "test": "echo \"no tests yet\""
-    },
-    "dependencies": {
-        "@flowops/common": "*"
-    }
+  "name": "@flowops/control-plane",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FlowOps control plane",
+  "scripts": {
+    "test": "echo \"no tests yet\""
+  },
+  "dependencies": {
+    "@flowops/common": "*"
+  }
 }

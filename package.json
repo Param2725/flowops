@@ -1,18 +1,29 @@
 {
-    "name": "flowops",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "workspaces": [
-        "gateway",
-        "control-plane",
-        "demo-upstream",
-        "packages/*"
-    ],
-    "engines": {
-        "node": ">=20"
-    },
-    "scripts": {
-        "test": "npm run test --workspaces --if-present"
-    }
+  "name": "flowops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "gateway",
+    "control-plane",
+    "demo-upstream",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
 }
