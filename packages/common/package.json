@@ -4,5 +4,8 @@
   "private": true,
   "type": "module",
   "main": "src/index.js",
-  "exports": "./src/index.js"
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test"
+  }
 }
