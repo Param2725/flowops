@@ -16,3 +16,8 @@ Short records of design choices and the reason for each.
 
 - **Decision:** rate-limit counters live in memory. Redis is only a local, optional store.
 - **Why:** free-tier hosting has no free Redis. The limiter sits behind a store interface so Redis can plug in.
+
+## 004: Token storage and API contract
+
+- **Decision:** access token in memory, refresh token in localStorage; single resources returned as-is, lists as `{ items, page, limit, total }`, errors as `{ error: { code, message, details } }`.
+- **Why:** the frontend and backend live on different domains, so httpOnly cookies are unreliable across sites. The trade-off is exposure to XSS, so the refresh token is rotated and the app avoids rendering unsanitised HTML.
