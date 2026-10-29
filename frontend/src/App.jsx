@@ -1,8 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import AppLayout from './components/layout/AppLayout.jsx';
+import PlaceholderPage from './components/PlaceholderPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
+import { NAV_ITEMS } from './config/navigation.js';
+
 const App = () => (
-  <main className="min-h-screen bg-slate-900 p-6 text-slate-100">
-    <h1 className="text-2xl font-semibold text-cyan-400">FlowOps</h1>
-    <p className="mt-2 text-slate-400">Frontend scaffold is running.</p>
-  </main>
+  <Routes>
+    <Route element={<AppLayout />}>
+      {NAV_ITEMS.map(({ to, label }) => (
+        <Route key={to} path={to} element={<PlaceholderPage title={label} />} />
+      ))}
+      <Route path="*" element={<NotFoundPage />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
